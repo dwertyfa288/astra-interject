@@ -4,6 +4,7 @@ ui/interject.js
 test/
 docs/
 CHATS.md
+AGENTS.md
 *.astraplugin
 *.log
 .DS_Store
