@@ -1,0 +1,10 @@
+{
+  "config.enabled.description": "Listen for the next phrase after Astra finishes speaking.",
+  "config.enabled.title": "Follow-up listening",
+  "config.follow_up_timeout_seconds.description": "How long Astra records the next phrase before sending it for recognition.",
+  "config.follow_up_timeout_seconds.title": "Listening window, seconds",
+  "config.follow_up_once.description": "Open the listening window only once after a wake-word call. Off — it opens after every answer.",
+  "config.follow_up_once.title": "Single follow-up per call",
+  "listing.description": "Continue voice conversations without repeating the wake word",
+  "listing.name": "AstraInterject"
+}

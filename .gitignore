@@ -1,0 +1,9 @@
+node_modules/
+dist/
+ui/interject.js
+test/
+docs/
+CHATS.md
+*.astraplugin
+*.log
+.DS_Store

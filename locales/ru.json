@@ -1,0 +1,10 @@
+{
+  "config.enabled.description": "Слушать следующую фразу после ответа Astra.",
+  "config.enabled.title": "Продолжение диалога",
+  "config.follow_up_timeout_seconds.description": "Сколько секунд Astra записывает следующую фразу перед распознаванием.",
+  "config.follow_up_timeout_seconds.title": "Окно прослушивания, сек.",
+  "config.follow_up_once.description": "Окно открывается только один раз после вызова по триггерному слову. Выключено — открывается после каждого ответа.",
+  "config.follow_up_once.title": "Одно продолжение за раз",
+  "listing.description": "Продолжение голосового диалога без повторения триггерного слова",
+  "listing.name": "AstraInterject"
+}

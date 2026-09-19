@@ -1,0 +1,28 @@
+{
+  "name": "astra-interject",
+  "version": "0.1.0",
+  "description": "Continue Astra voice conversations without repeating the wake word",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run build:backend && npm run build:ui",
+    "build:backend": "esbuild src/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.js",
+    "build:ui": "esbuild src/ui/index.ts --bundle --platform=browser --format=iife --outfile=ui/interject.js",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.0",
+    "@grpc/proto-loader": "^0.7.0",
+    "astra-plugin-sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.9.0"
+  }
+}

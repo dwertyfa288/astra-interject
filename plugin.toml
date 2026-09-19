@@ -1,0 +1,51 @@
+[plugin]
+id = "astra-interject"
+name = "AstraInterject"
+version = "0.1.0"
+description = "Continue voice conversations without repeating the wake word"
+author = "dwertyfa"
+license = "MIT"
+
+[entry]
+command = "node"
+args = ["dist/index.js"]
+runtimes = ["node"]
+
+[capabilities]
+ui_contributions = true
+dom_access = true
+event_handlers = true
+
+[permissions]
+subscribe_events = { types = ["state_changed", "tts_started", "tts_completed", "tts_interrupted"], reason = "Detects when Astra truly finishes speaking so follow-up listening opens only after the answer has fully played" }
+dom_access = { reason = "Starts Astra's native push-to-talk capture after a spoken response" }
+
+[config]
+schema = """
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "enabled": {
+      "type": "boolean",
+      "default": true,
+      "title": "$config.enabled.title",
+      "description": "$config.enabled.description"
+    },
+    "follow_up_timeout_seconds": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 30,
+      "default": 8,
+      "title": "$config.follow_up_timeout_seconds.title",
+      "description": "$config.follow_up_timeout_seconds.description"
+    },
+    "follow_up_once": {
+      "type": "boolean",
+      "default": false,
+      "title": "$config.follow_up_once.title",
+      "description": "$config.follow_up_once.description"
+    }
+  }
+}
+"""
